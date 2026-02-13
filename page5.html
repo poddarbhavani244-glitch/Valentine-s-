@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise 💖</title>
+<style>
+body { margin:0;padding:0; font-family:'Segoe UI',sans-serif;
+  display:flex; justify-content:center; align-items:center; flex-direction:column;
+  height:100vh; text-align:center; background: linear-gradient(135deg,#fbc2eb,#a6c1ee);
+  color:white; overflow:hidden; padding:20px;}
+h1 { font-size:2.8rem; margin-bottom:20px; }
+p { font-size:1.4rem; max-width:600px; line-height:2; margin-bottom:30px;}
+button { background:#ff6b81; color:white; border:none;
+  padding:12px 25px; font-size:1.1rem; border-radius:25px;
+  cursor:pointer; transition:0.3s; }
+button:hover { transform:scale(1.05); background:#ff4757; }
+.confetti { position:absolute; font-size:20px; animation:fall 3s linear infinite; }
+@keyframes fall { 0%{top:-10px;} 100%{top:100vh;} }
+</style>
+</head>
+<body>
+<h1>We Did It! 💖</h1>
+<p>Bubu loves Dudu forever 😍<br>
+Thank you for being my everything…<br>
+Happy Valentine’s Day! 💌</p>
+<button onclick="location.href='index.html'">Replay 💕</button>
+
+<script>
+// Simple confetti
+for(let i=0;i<50;i++){
+  let c=document.createElement('div');
+  c.className='confetti';
+  c.innerText='💖';
+  c.style.left=Math.random()*100+'vw';
+  c.style.fontSize=(15+Math.random()*20)+'px';
+  document.body.appendChild(c);
+}
+</script>
+
+<!-- Background music -->
+<audio autoplay loop>
+  <source src="music/final_romantic.mp3" type="audio/mp3">
+</audio>
+</body>
+</html>
